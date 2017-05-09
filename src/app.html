@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>datadec-starter-vuetify</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="public/favicon-32x32.png" sizes="32x32">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<v-app id="app" class="elevation-1" top-toolbar left-fixed-sidebar sidebar-under-toolbar>
+		<app-navigation @event_showmenu="eventShowmenu"></app-navigation>
+		<app-menu :showmenu="stateMenu"></app-menu>
+
+	</v-app>
+</body>
+
+</html>
