@@ -4,9 +4,9 @@ import HTTP from '@/config/axios-config';
 
 export default Vue.extend({
 	template,
-	props: ['showmenu'],
 	data() {
 		return {
+			showmenu: false,
 			items: [{
 				title: 'Axios'
 			}, {
@@ -15,6 +15,11 @@ export default Vue.extend({
 				title: 'Option 2'
 			}]
 		};
+	},
+	created: function () {
+		this.$bus.$on('event-showmenu', (value) => {
+			this.showmenu = value;
+		});
 	},
 	methods: {
 		loadOption(event) {

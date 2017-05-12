@@ -1,16 +1,18 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify'
+import Vue from 'vue';
+import Vuetify from 'vuetify';
 
 // Styles
-import './stylus/app.styl'
+import './stylus/app.styl';
 
+// Eventbus
+import '@/config/event-bus.js'
 
 // Components
 import AppNavigation from './components/Navigation/Navigation';
 import AppMenu from './components/Menu/Menu';
 
 // Vue plugins
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 
 // Vue main instance
 new Vue({
@@ -20,13 +22,7 @@ new Vue({
 	},
 	data() {
 		return {
-			stateMenu: false,
 			isLoading: 'Aplicación cargada ...'
 		};
-	},
-	methods: {
-		eventShowmenu: function (value) {
-			this.stateMenu = value;
-		}
 	}
 }).$mount('#app');

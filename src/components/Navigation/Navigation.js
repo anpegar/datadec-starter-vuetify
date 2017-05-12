@@ -14,7 +14,7 @@ export default Vue.extend({
 	methods: {
 		showMenu: function () {
 			this.menuLeft = !this.menuLeft;
-			this.$emit('event_showmenu', this.menuLeft);
+			this.$bus.$emit('event-showmenu', this.menuLeft);
 		}
 	}
 
