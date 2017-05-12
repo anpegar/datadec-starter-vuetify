@@ -10,6 +10,7 @@
     "clean": "rimraf ./dist/*"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "jquery": "^3.2.1",
     "vue": "^2.3.2"
   },

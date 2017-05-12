@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+
+// Styles
 import './stylus/app.styl'
+
 
 // Components
 import AppNavigation from './components/Navigation/Navigation';
@@ -22,7 +25,7 @@ new Vue({
 		};
 	},
 	methods: {
-		eventShowmenu: function(value) {
+		eventShowmenu: function (value) {
 			this.stateMenu = value;
 		}
 	}

@@ -12,7 +12,7 @@ export default Vue.extend({
 		};
 	},
 	methods: {
-		showMenu: function() {
+		showMenu: function () {
 			this.menuLeft = !this.menuLeft;
 			this.$emit('event_showmenu', this.menuLeft);
 		}

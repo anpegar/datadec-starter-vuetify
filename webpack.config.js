@@ -80,7 +80,18 @@ module.exports = {
 		}
 	},
 	devServer: {
+		host: '127.0.0.1',
 		port: 3000,
+		proxy: {
+			'/crme/*': {
+				target: 'http://127.0.0.1:8080',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/crme': ''
+				},
+				secure: false
+			}
+		},
 		historyApiFallback: {
 			index: url.parse(isProd ? publicPath : '/dist/').pathname
 		},
@@ -96,7 +107,8 @@ module.exports = {
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
-			jQuery: 'jquery'
+			jQuery: 'jquery',
+			axios: 'axios'
 		})
 	]
 }
