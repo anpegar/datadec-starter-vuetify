@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import template from './Menu.html';
-import HTTP from '../../config/axios-config';
+import HTTP from '@/config/axios-config';
 
 export default Vue.extend({
 	template,
